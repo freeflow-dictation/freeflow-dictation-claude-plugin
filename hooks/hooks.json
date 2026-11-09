@@ -1,0 +1,61 @@
+{
+  "description": "FreeFlow Dictation: hands each moment a Claude Code session waits on you (a plan to approve, a question, a permission, a finished turn) to the FreeFlow app, which shows a card you answer by clicking or by holding Option and speaking. Every hook is the same helper inside FreeFlow.app; it exits 0 and prints nothing whenever FreeFlow is not running, so Claude Code falls back to its own prompt.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "ExitPlanMode|AskUserQuestion",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Applications/FreeFlow.app/Contents/MacOS/freeflow-agent-hook",
+            "timeout": 130
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Applications/FreeFlow.app/Contents/MacOS/freeflow-agent-hook",
+            "timeout": 130
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Applications/FreeFlow.app/Contents/MacOS/freeflow-agent-hook",
+            "timeout": 130
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Applications/FreeFlow.app/Contents/MacOS/freeflow-agent-hook",
+            "timeout": 130
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Applications/FreeFlow.app/Contents/MacOS/freeflow-agent-hook",
+            "timeout": 130
+          }
+        ]
+      }
+    ]
+  }
+}
