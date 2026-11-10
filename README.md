@@ -28,17 +28,17 @@ The plugin does nothing on Linux or Windows, and nothing on a Mac without FreeFl
 One line, from your shell:
 
 ```bash
-claude plugin install freeflow-dictation --marketplace FreemanGT/freeflow-dictation-plugins
+claude plugin install freeflow-dictation --marketplace freeflow-dictation/freeflow-dictation-plugins
 ```
 
 Or in two steps:
 
 ```bash
-claude plugin marketplace add FreemanGT/freeflow-dictation-plugins
+claude plugin marketplace add freeflow-dictation/freeflow-dictation-plugins
 claude plugin install freeflow-dictation@freeflow-dictation
 ```
 
-Inside a Claude Code session, `/plugin marketplace add FreemanGT/freeflow-dictation-plugins` then `/plugin install freeflow-dictation@freeflow-dictation` does the same. New sessions pick the hooks up at startup; run `/reload-plugins` in a session that is already open.
+Inside a Claude Code session, `/plugin marketplace add freeflow-dictation/freeflow-dictation-plugins` then `/plugin install freeflow-dictation@freeflow-dictation` does the same. New sessions pick the hooks up at startup; run `/reload-plugins` in a session that is already open.
 
 Then open FreeFlow Dictation, go to Settings, and make sure Claude Code is turned on. A card appears the next time a session asks you something.
 
@@ -105,14 +105,14 @@ Uninstalling removes the plugin's enable flag from `~/.claude/settings.json` and
 
 **A permission card ignores my voice.** By design. Permissions are click-only because the thing on the other side runs a command.
 
-**Install fails with a git or SSH error.** Set `CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1` and try again, or add the marketplace by URL: `claude plugin marketplace add https://github.com/FreemanGT/freeflow-dictation-plugins`.
+**Install fails with a git or SSH error.** Set `CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1` and try again, or add the marketplace by URL: `claude plugin marketplace add https://github.com/freeflow-dictation/freeflow-dictation-plugins`.
 
 ## Links
 
 - FreeFlow Dictation for Claude Code: [freeflow.audio/claude-code](https://freeflow.audio/claude-code)
 - Privacy: [freeflow.audio/privacy](https://freeflow.audio/privacy)
 - Support: [support@freeflow.audio](mailto:support@freeflow.audio)
-- Marketplace repository: [github.com/FreemanGT/freeflow-dictation-plugins](https://github.com/FreemanGT/freeflow-dictation-plugins)
+- Marketplace repository: [github.com/freeflow-dictation/freeflow-dictation-plugins](https://github.com/freeflow-dictation/freeflow-dictation-plugins)
 
 ## Licence
 
